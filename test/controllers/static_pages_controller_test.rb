@@ -18,7 +18,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     get root_url
     # getはHomeページやHelpページがいわゆる「GETリクエストを受け付ける」普通のWebページであるということを示します
     assert_response :success
-    assert_select "title", "Home | #{@base_title}"
+    assert_select "title", "#{@base_title}"
   end
 
   test "should get help" do
